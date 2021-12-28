@@ -1,0 +1,15 @@
+{
+  "name": "backendtc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AMINE-ADJ/backendtc.git",
+  "author": "Amine <ka_adjou@esi.dz>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "scripts": {
+    "start": "node src/app.js"
+  }
+}
