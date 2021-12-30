@@ -11,6 +11,8 @@ const app = express();
 // res.send('Im Amine AD 2CP student at ESI ALGIERS !!'); 
 // }); 
 
+app.use('/', routers); 
+
 
 app.listen(3000,()=>console.log('Server is listening on port 3000')); 
 
