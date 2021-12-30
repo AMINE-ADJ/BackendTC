@@ -7,11 +7,15 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "csv-parse": "^5.0.3",
+    "csv-parser": "^3.0.0",
     "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
     "mongoose": "^6.1.4"
   },
   "scripts": {
-    "start": "node src/app.js",
-    "go": "src/app.js"
+    "start": "node src/app.js"
   }
 }
