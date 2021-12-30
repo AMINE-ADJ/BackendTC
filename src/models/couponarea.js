@@ -1,27 +1,29 @@
 import mongoose from 'mongoose';
-const DOCUMENT_NAME = 'Couponvisit';
-const COLLECTION_NAME = 'couponvisits';
+const DOCUMENT_NAME = 'Couponarea';
+const COLLECTION_NAME = 'couponareas';
 
-export const couponvisitSchema = new mongoose.Schema({
-    PREF_NAME: {
+export const couponareaSchema = new mongoose.Schema({
+    PREF_NAME : {
         type: mongoose.Schema.Types.String,
-        required: true
+        default:'',
+        required: false
     },
-    SMALL_AREA_NAME: {
-        type: mongoose.Schema.Types.Number, 
-        required: true
+    SMALL_AREA_NAME : {
+        type: mongoose.Schema.Types.String, 
+        required:false,
     },
-    COUPON_ID_hash: {
+    COUPON_ID_hash : {
         type: mongoose.Schema.Types.String,
-        required: true,
+        required:false
     },
-    EN_SMALL_AREA_NAME: {
+    EN_SMALL_AREA_NAME : {
         type: mongoose.Schema.Types.String,
-        required: true,
+        required: false,
     },
-    EN_PREF_NAME: {
+    EN_PREF_NAME : {
         type: mongoose.Schema.Types.String,
-        required: true,
+        default:'',
+        required: false,
     },
     
 }, {
@@ -29,4 +31,4 @@ export const couponvisitSchema = new mongoose.Schema({
 });
 
 
-export const CouponvisitModel = mongoose.model(DOCUMENT_NAME, couponvisitSchema, COLLECTION_NAME)
+export const CouponareaModel = mongoose.model(DOCUMENT_NAME, couponareaSchema, COLLECTION_NAME)

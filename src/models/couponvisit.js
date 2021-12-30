@@ -1,44 +1,44 @@
 import mongoose from 'mongoose';
-const DOCUMENT_NAME = 'Coupondetail';
-const COLLECTION_NAME = 'coupondetails';
+const DOCUMENT_NAME = 'Couponvisit';
+const COLLECTION_NAME = 'couponvisits';
 
-export const coupondetailSchema = new mongoose.Schema({
+export const couponvisitSchema = new mongoose.Schema({
     PURCHASE_FLG: {
-        type: mongoose.Schema.Types.Number,
-        required: true
+        type: mongoose.Schema.Types.String,
+        required:false,
     },
     I_DATE: {
         type: mongoose.Schema.Types.String, 
-        required: true
+        required:false,
     },
     PAGE_SERIAL: {
-        type: mongoose.Schema.Types.Number,
-        required: true,
+        type: mongoose.Schema.Types.String,
+        required:false,
     },
     REFERRER_hash: {
         type: mongoose.Schema.Types.String,
-        required: true,
+        required:false,
     },
     VIEW_COUPON_ID_hash: {
         type: mongoose.Schema.Types.String,
-        required: true,
+        required:false,
     },
     USER_ID_hash: {
         type: mongoose.Schema.Types.String,
-        required: true,
+        required:false,
     },
     SESSION_ID_hash: {
         type: mongoose.Schema.Types.String,
-        required: true,
+        required:false,
     },
     PURCHASEID_hash: {
         type: mongoose.Schema.Types.String,
         required: false,
-        default:''
+        // default:''
     },
 }, {
     timestamps: true,
 });
 
 
-export const CoupondetailModel = mongoose.model(DOCUMENT_NAME, coupondetailSchema, COLLECTION_NAME)
+export const CouponvisitModel = mongoose.model(DOCUMENT_NAME, couponvisitSchema, COLLECTION_NAME)

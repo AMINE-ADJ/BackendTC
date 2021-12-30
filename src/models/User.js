@@ -29,6 +29,20 @@ export const userSchema = new mongoose.Schema({
         required: false,
         default: 'NA'
     },
+    username: {
+        type: mongoose.Schema.Types.String,
+        required: true,
+    },
+    email: {
+        type: mongoose.Schema.Types.String,
+        required: true,
+        unique: true,
+        trim: true,
+    },
+    password: {
+        type: mongoose.Schema.Types.String,
+        required: true,
+    },
 }, {
     timestamps: true,
 });

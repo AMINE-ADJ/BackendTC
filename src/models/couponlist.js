@@ -3,57 +3,30 @@ const DOCUMENT_NAME = 'Couponlist';
 const COLLECTION_NAME = 'couponlists';
 
 export const couponlistSchema = new mongoose.Schema({
-    large_area_name: {
-        type: mongoose.Schema.Types.String,
-      
-        required: true
-    },
-    ken_name: {
-        type: mongoose.Schema.Types.String,
 
-        required: true
-    },
-    small_area_name: {
-        type: mongoose.Schema.Types.String,
-        required: true,
-    },
-    GENRE_NAME: {
-        type: mongoose.Schema.Types.String,
-        required: true,
-    },
-    CAPSULE_TEXT: {
-        type: mongoose.Schema.Types.String,
-        required: true,
-    },
     PRICE_RATE: {
-        type: mongoose.Schema.Types.Number,
-        required: true,
-        
+        type: mongoose.Schema.Types.String,
+        required:true
     },
     CATALOG_PRICE: {
-        type: mongoose.Schema.Types.Number,
-        required: true,
-       
+        type: mongoose.Schema.Types.String,
+        required:true
     },
     DISCOUNT_PRICE: {
-        type: mongoose.Schema.Types.Number,
-        required: true,
-        
+        type: mongoose.Schema.Types.String,
+        required:true
     },
     DISPFROM: {
         type: mongoose.Schema.Types.String,
-        required: true,
-        
+        required:true
     },
     DISPEND: {
         type: mongoose.Schema.Types.String,
-        required: true,
-       
+        required:true
     },
     DISPPERIOD: {
-        type: mongoose.Schema.Types.Number,
-        required: true,
-        
+        type: mongoose.Schema.Types.String,
+        required:true
     },
     VALIDFROM: {
         type: mongoose.Schema.Types.String,
@@ -66,78 +39,78 @@ export const couponlistSchema = new mongoose.Schema({
         default: 'NA'
     },
     VALIDPERIOD: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_MON: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_TUE: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_WED: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_THU: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_FRI: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1   
+        default: 'NA'  
     },
     USABLE_DATE_SAT: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_SUN: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_HOLIDAY: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1
+        default: 'NA'
     },
     USABLE_DATE_BEFORE_HOLIDAY: {
-        type: mongoose.Schema.Types.Number,
+        type: mongoose.Schema.Types.String,
         required: false,
-        default: -1 
+        default: 'NA'
     },
     COUPON_ID_hash: {
         type: mongoose.Schema.Types.String,
-        required: true
+        required:true
     },
     en_capsule: {
         type: mongoose.Schema.Types.String,
-        required: true
+        required:true
     },
     en_genre: {
         type: mongoose.Schema.Types.String,
-        required: true
+        required:true
     },
     en_small_area: {
         type: mongoose.Schema.Types.String,
-        required: true
+        required:true
     },
     en_ken: {
         type: mongoose.Schema.Types.String,
-        required: true
+        required:true
     },
     en_large_area: {
         type: mongoose.Schema.Types.String,
-        required: true
+        required:true
     },
 }, {
     timestamps: true,
