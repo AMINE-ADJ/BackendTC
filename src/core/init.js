@@ -79,6 +79,8 @@ try {
         for (let i = 0; i < csvData.length; i++) {
             console.log(csvData[i]);
             await CouponlistModel.create(csvData[i]); 
+           
+
         }
     });
     } //how to represent the NA field. 
@@ -99,33 +101,35 @@ try {
     .on('end',async function()  {
 
         for (let i = 0; i < csvData.length; i++) {
-            console.log(csvData[i]);
             await CoupondetailModel.create(csvData[i]); 
+            console.log(csvData[i]);
         }
     });
     }
-//couponarea collection init. 
+// couponarea collection init. 
 const couponareasCount =  await CouponareaModel.countDocuments().exec();
-console.info(`Count of preflocs are ${couponareasCount}`);
-
+console.info(`Count of users are ${couponareasCount}`);
+// if we don't have users
 if (couponareasCount === 0) {
-    
+    // insert default users
+    // const users = JSON.parse(fs.readFileSync(`${process.cwd()}/user_list.csv`, 'utf8')); if we where on json files. 
 var csvData =[];
 fs.createReadStream(`${process.cwd()}/coupon_area_train.csv`) 
 .pipe(csv())
 .on('data', function(csvrow) {
-    
+    // console.log(csvrow);
     csvData.push(csvrow);        
 })
 .on('end',async function()  {
-
+//   console.log(csvData);
+// console.log(`${csvData.length}`);
     for (let i = 0; i < csvData.length; i++) {
         console.log(csvData[i]);
-        await CouponareaModel.create(csvData[i]); 
+        await CouponareaModel.create(csvData[i]); //premiere iteration matkonch kayna collection ycreeyiha, apres ybda yinserer document par document 
     }
 });
 }
- //couponvisits collection init. 
+//  couponvisits collection init. 
 
  const couponvisitsCount =  await CouponvisitModel.countDocuments().exec();
  console.info(`Count of preflocs are ${couponvisitsCount}`);
@@ -142,8 +146,10 @@ fs.createReadStream(`${process.cwd()}/coupon_area_train.csv`)
  .on('end',async function()  {
  
      for (let i = 0; i < csvData.length; i++) {
-         console.log(csvData[i]);
+
          await CouponvisitModel.create(csvData[i]); 
+         console.log(csvData[i]);
+
      }
  });
  }
